@@ -75,6 +75,7 @@ export const DATA_MAP = {
   INV_HV_BATT_VOLTAGE: { id: keygen(), byteType: TYPES.FLOAT }, // xx.x volts
   INV_CTS: { id: keygen(), byteType: TYPES.INT16 },  // xx.x degrees C 
   MOTOR_CTS: { id: keygen(), byteType: TYPES.INT16 },  // xx.x degrees C 
+  INV_ERROR: { id: keygen(), byteType: TYPES.INT8},
 };
 
 // iterate through each key and add the byteOffset to the object
