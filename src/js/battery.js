@@ -1,7 +1,9 @@
 let batHand = null;
+let batText = null;
 
 // MAX bat level in gauge
-const maxPercent = 100;
+const maxPercent = 404;
+const minPercent = 355;
 
 //////// rotation degree of sweep needle:
 // const offset = 264;
@@ -15,6 +17,7 @@ const maxSweep = 90;
 export default {
   initialize: () => {
     batHand = document.getElementById("bat_needle");
+    batText = document.getElementById("bat_text");
     batHand.style.transform = `rotate(${offSweep}deg)`;
   },
   update: (batp, noComm) => {
@@ -25,6 +28,8 @@ export default {
     }
 
     // set rotation of hand
-    batHand.style.transform = `rotate(${(batp / maxPercent) * (maxSweep - minSweep) + minSweep}deg)`;
+    console.log(batp)
+    batText.textContent = 'HV battery: ' + batp + 'V'
+    batHand.style.transform = `rotate(${((batp - minPercent) / (maxPercent - minPercent)) * (maxSweep - minSweep) + minSweep}deg)`;
   },
 };

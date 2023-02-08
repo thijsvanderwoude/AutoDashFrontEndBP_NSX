@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Boiler Plate front end for AutoDashBackEnd",
   "main": "index.js",
-  "authors": "a_random_dev, gesso15",
+  "author": "a_random_dev",
   "license": "MIT",
   "private": true,
   "scripts": {

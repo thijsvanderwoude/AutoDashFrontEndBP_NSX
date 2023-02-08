@@ -6,6 +6,8 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+   <div class="row">
+   <div class="column left">
     <div id="tach_container">
       <div class="tach">
         <image class="" src="./assets/images/tach-background.png" />
@@ -18,8 +20,31 @@
         <image class="" src="./assets/images/bat_gauge_320.png" />
         <image id="bat_needle" src="./assets/images/needle.png" />
         <image class="cap" src="./assets/images/cap.png" />
+	<h1 class="bat_text_cont" id="bat_text">V</h1>
       </div>
     </div>
+   </div>
+   <div class="column right">
+    <div id="text_container">
+      <div class="text_c">
+        <table>
+          <tr>
+            <td>Inverter HV:</td>
+            <td id="hv_bat_volts">volts</td>
+          </tr>
+          <tr>
+            <td>Inverter Temp:</td>
+            <td id="inverter_temp">Degrees F</td>
+          </tr>
+          <tr>
+            <td>Motor Temp:</td>
+            <td id="motor_temp">Degrees F</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+   </div>
+   </div>
   </body>
   <style>
     html,
@@ -30,6 +55,19 @@
       margin: 0;
       overflow: hidden;
       background: transparent;
+    }
+    .row {
+      display: flex;
+    }
+    .column {
+      float: left;
+      padding: 10px;
+    }
+    .left {
+      width: 30%
+    }
+    .right {
+      width: 70%
     }
     .tach > img {
       position: absolute;
@@ -62,6 +100,20 @@
     #bat_needle {
       will-change: transform;
       transition: transform 0.1s;
+    }
+    .bat_text_cont {
+      text-align: center;
+      border: solid;
+    }
+    .text_c {
+      font-size: 75px;
+    }
+    table, tr {
+      border: 4px solid;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%
     }
 
   </style>
