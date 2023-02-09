@@ -4,10 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="assets/bootstrap/bootstrap-grid.min.css" rel="stylesheet">
   </head>
-  <body>
-    
-
+  <body class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <p>Hi!</p>
+      </div>
+      <div class="col">
+        <p>Hi!</p>
+      </div>
+      <div class="col">
+        <p>Hi!</p>
+      </div>
+      <div class="col">
+        <button onclick="switchScreenState()">Fullscreen</button>
+      </div>
+    </div>
+    <script>
+      function switchScreenState() {
+        if (document.fullscreenElement) {
+          document.exitFullscreen()
+            .then(() => console.log("Document Exited from Full screen mode"))
+            .catch((err) => console.error(err))
+        } else {
+          document.documentElement.requestFullscreen();
+        }
+      }
+    </script>
    <!--div class="row">
    <div class="column left">
     <div id="tach_container">
