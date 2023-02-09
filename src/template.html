@@ -4,147 +4,71 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <link href="assets/bootstrap/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
   </head>
-  <body class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <p>Hi!</p>
-      </div>
-      <div class="col">
-        <p>Hi!</p>
-      </div>
-      <div class="col">
-        <p>Hi!</p>
-      </div>
-      <div class="col">
-        <button onclick="switchScreenState()">Fullscreen</button>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div id="carouselExampleIndicators" class="carousel slide vh-100">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col">
+                    <p>lmao</p>
+                  </div>
+                  <div class="col">
+                    <p>lmao</p>
+                  </div>
+                  <div class="col">
+                    <p>lmao</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <p>lmao</p>
+                  </div>
+                  <div class="col">
+                    <p>lmao</p>
+                  </div>
+                  <div class="col">
+                    <p>lmao</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+
+            </button>
+          </div>
+          
+        </div>
       </div>
     </div>
+    <script src="assets/bootstrap/bootstrap.min.js"></script>
     <script>
       function switchScreenState() {
         if (document.fullscreenElement) {
           document.exitFullscreen()
-            .then(() => console.log("Document Exited from Full screen mode"))
             .catch((err) => console.error(err))
         } else {
           document.documentElement.requestFullscreen();
         }
       }
     </script>
-   <!--div class="row">
-   <div class="column left">
-    <div id="tach_container">
-      <div class="tach">
-        <image class="" src="./assets/images/tach-background.png" />
-        <image id="tach_needle" src="./assets/images/needle.png" />
-        <image class="cap" src="./assets/images/cap.png" />
-      </div>
-    </div>
-    <div id="bat_container">
-      <div class="bat">
-        <image class="" src="./assets/images/bat_gauge_320.png" />
-        <image id="bat_needle" src="./assets/images/needle.png" />
-        <image class="cap" src="./assets/images/cap.png" />
-	<h1 class="bat_text_cont" id="bat_text">V</h1>
-      </div>
-    </div>
-   </div>
-   <div class="column right">
-    <div id="text_container">
-      <div class="text_c">
-        <table>
-          <tr>
-            <td>Inverter HV:</td>
-            <td id="hv_bat_volts">volts</td>
-          </tr>
-          <tr>
-            <td>Inverter Temp:</td>
-            <td id="inverter_temp">Degrees F</td>
-          </tr>
-          <tr>
-            <td>Motor Temp:</td>
-            <td id="motor_temp">Degrees F</td>
-          </tr>
-          <tr>
-            <td>Inverter Error:</td>
-            <td id="inv_error">NA</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-   </div>
-   </div-->
   </body>
-  <!--style>
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      overflow: hidden;
-      background: transparent;
-    }
-    .row {
-      display: flex;
-    }
-    .column {
-      float: left;
-      padding: 10px;
-    }
-    .left {
-      width: 30%
-    }
-    .right {
-      width: 70%
-    }
-    .tach > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .tach {
-      position: relative;
-      width: 323px;
-      height: 318px;
-    }
-    #tach_needle {
-      will-change: transform;
-      transition: transform 0.1s;
-    }
-    .bat > img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .bat {
-      position: relative;
-      width: 323px;
-      height: 318px;
-    }
-    #bat_needle {
-      will-change: transform;
-      transition: transform 0.1s;
-    }
-    .bat_text_cont {
-      text-align: center;
-      border: solid;
-    }
-    .text_c {
-      font-size: 75px;
-    }
-    table, tr {
-      border: 4px solid;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%
-    }
-
-  </style-->
 </html>
