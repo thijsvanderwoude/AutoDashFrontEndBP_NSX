@@ -1,7 +1,43 @@
+@font-face {
+    font-family: "Controller Five Oblique";
+    src: url("../../assets/fonts/Controller Ext W03 Five Oblique.ttf");
+}
+
+
 body {
     margin: 0;
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, rgb(51, 51, 51) 0%, rgb(0, 0, 0) 60%); 
+    font-family: "Controller Five Oblique";
     color: white;
 }
 
+.vh-15 {
+    min-height: 15%;
+    max-height: 15%;
+}
+
+.vh-20 {
+    min-height: 20%;
+    max-height: 20%;
+}
+
+.vh-50 {
+    min-height: 50%;
+    max-height: 50%;
+}
+
+#fullscreen {
+    z-index: 100;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* NOTES
+using 17px as a universal margin around every "pane".
+mph gauge is 94px high.

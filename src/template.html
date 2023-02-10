@@ -10,6 +10,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
+        <button id="fullscreen" onclick="switchScreenState()"></button>
         <div class="col">
           <div id="carouselExampleIndicators" class="carousel slide vh-100">
             <div class="carousel-indicators">
@@ -18,44 +19,114 @@
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row">
+              <div class="carousel-item active vh-100">
+
+                <div class="row vh-15">
+                  <div class="col-1">
+                    <h1 class="display-2" style="margin: 6px 0px 0px 0px;">D</h1>
+                  </div>
+                  <div class="col-11" style="padding: 17px;">
+                    <div class="progress" style="height: 100%;">
+                      <div class="progress-bar bg-warning" role="progressbar" aria-label="Segment one" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-black" role="progressbar" aria-label="Segment two" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-danger" role="progressbar" aria-label="Segment three" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="w-100 d-flex justify-content-between" style="margin-bottom: -20px;">
+                      <p>0</p>
+                      <p>100</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row vh-20">
                   <div class="col">
-                    <p>lmao</p>
+                    <div class="w-100 d-flex justify-content-end" style="margin-bottom: -20px;">
+                      <h1 class="display-1">101</h1>
+                    </div>
+                    <div class="w-100 d-flex justify-content-end">
+                      <p>miles left</p>
+                    </div>
                   </div>
                   <div class="col">
-                    <p>lmao</p>
+                    <div class="w-100 d-flex justify-content-end" style="margin-bottom: -20px;">
+                      <h1 class="display-1">420</h1>
+                    </div>
+                    <div class="w-100 d-flex justify-content-end">
+                      <p>mph</p>
+                    </div>
                   </div>
                   <div class="col">
+                    <div class="w-100 d-flex justify-content-end" style="margin-bottom: -20px;">
+                      <h1 class="display-1">47&deg;</h1>
+                    </div>
+                    <div class="w-100 d-flex justify-content-end">
+                      <p>outside</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row vh-50">
+                  <div class="col vh-50">
+                    <p></p>
+                  </div>
+                  <div class="col vh-50">
+                    <p></p>
+                  </div>
+                  <div class="col vh-50">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item vh-100">
+                <div class="row vh-50">
+                  <div class="col vh-50">
+                    <h1 class="display-1">D</h1>
+                  </div>
+                  <div class="col vh-50">
+                    <p>lmao</p>
+                  </div>
+                  <div class="col vh-50">
                     <p>lmao</p>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col">
+                <div class="row vh-50">
+                  <div class="col vh-50">
                     <p>lmao</p>
                   </div>
-                  <div class="col">
+                  <div class="col vh-50">
                     <p>lmao</p>
                   </div>
-                  <div class="col">
+                  <div class="col vh-50">
                     <p>lmao</p>
                   </div>
                 </div>
               </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+              <div class="carousel-item vh-100">
+                <div class="row vh-50">
+                  <div class="col vh-50">
+                    <h1 class="display-1">D</h1>
+                  </div>
+                  <div class="col vh-50">
+                    <p>lmao</p>
+                  </div>
+                  <div class="col vh-50">
+                    <p>lmao</p>
+                  </div>
+                </div>
+                <div class="row vh-50">
+                  <div class="col vh-50">
+                    <p>lmao</p>
+                  </div>
+                  <div class="col vh-50">
+                    <p>lmao</p>
+                  </div>
+                  <div class="col vh-50">
+                    <p>lmao</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"></button>
           </div>
-          
         </div>
       </div>
     </div>
