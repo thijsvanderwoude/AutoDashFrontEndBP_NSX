@@ -97,7 +97,7 @@ body {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 47px;
+    height: 35px;
 }
 
 .wave .shape-fill {
@@ -110,6 +110,10 @@ body {
 
 .bg-race-270 {
     background: linear-gradient(270deg, #b40000 0%, #2c0000 100%);
+}
+
+.bg-race {
+    background-color: #a80e0e;
 }
 
 /* NOTES
