@@ -3,6 +3,8 @@ import { DATA_MAP, WARNING_KEYS } from "./js/common/dataMap";
 import tachometer from "./js/tachometer";
 import table from "./js/table";
 import battery from "./js/battery";
+import tps from "./js/tps";
+
 const dataWorker = new Worker(
   new URL("./js/comms/drawDataWorker.js", import.meta.url)
 );
@@ -38,8 +40,9 @@ const initializeApp = () => {
 
   // start up our tach
   tachometer.initialize();
-  table.initialize()
-  battery.initialize()
+  table.initialize();
+  battery.initialize();
+  tps.initialize();
 
   // start up update loop (responsible for updating the graphic positions!)
   tick();
