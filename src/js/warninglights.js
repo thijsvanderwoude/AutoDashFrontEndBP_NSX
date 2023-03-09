@@ -8,15 +8,15 @@ export default {
   },
   update: (inverterError, noComm) => {
     if (inverterError) {
-      inverterErrorLight.classList.remove("d-none");
+      inverterErrorLight.classList.remove("text-black");
       return;
     }
     if (noComm) {
-      serverConnectionLight.classList.remove("d-none");
+      serverConnectionLight.classList.remove("text-black");
       return;
     }
 
-    inverterErrorLight.classList.add("d-none");
-    serverConnectionLight.classList.add("d-none");
+    inverterErrorLight.classList.add("text-black");
+    serverConnectionLight.classList.add("text-black");
   },
 };
