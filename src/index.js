@@ -1,8 +1,8 @@
 "use strict";
 import { DATA_MAP, WARNING_KEYS } from "./js/common/dataMap";
-import tachometer from "./js/tachometer";
+//import tachometer from "./js/tachometer";
 import table from "./js/table";
-import battery from "./js/battery";
+//import battery from "./js/battery";
 import tps from "./js/tps";
 
 const dataWorker = new Worker(
@@ -26,9 +26,20 @@ const tick = () => {
   isCommError = getWarningLight(WARNING_KEYS.COMM_ERROR);
   
   // update stuff
-  tachometer.update(updateData[DATA_MAP.RPM.id], isCommError);
-  battery.update(updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id], isCommError);
-  table.update(updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id], updateData[DATA_MAP.INV_CTS.id], updateData[DATA_MAP.MOTOR_CTS.id], updateData[DATA_MAP.INV_ERROR.id], isCommError);
+  //tachometer.update(updateData[DATA_MAP.RPM.id], isCommError);
+  //battery.update(updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id], isCommError);
+  tps.update(
+    updateData[DATA_MAP.TPS.id],
+    isCommError
+  );
+
+  table.update(
+    updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id],
+    updateData[DATA_MAP.INV_CTS.id],
+    updateData[DATA_MAP.MOTOR_CTS.id],
+    updateData[DATA_MAP.INV_ERROR.id],
+    isCommError
+  );
 
   // request another update frame
   requestAnimationFrame(tick);
@@ -39,9 +50,9 @@ const initializeApp = () => {
   dataWorker.postMessage({ msg: "start" });
 
   // start up our tach
-  tachometer.initialize();
+  //tachometer.initialize();
   table.initialize();
-  battery.initialize();
+  //battery.initialize();
   tps.initialize();
 
   // start up update loop (responsible for updating the graphic positions!)

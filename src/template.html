@@ -81,7 +81,7 @@
                 <div class="row">
                   <div class="col-4 px-5 pt-3">
                     <p class="ps-1">throttle</p>
-                    <div class="progress" style="height: 35px; border-radius: 0px;">
+                    <div id="tpsBar" class="progress" style="height: 35px; border-radius: 0px;">
                       <div style="width: 65%" aria-valuenow="64" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                       <div style="width: 35%" aria-valuenow="35" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
@@ -93,144 +93,41 @@
                   <div class="col-4">                    
                   </div>
                   <div class="col-4 text-end px-5 pt-3">
+                    <p class="pe-1">charge</p>
                     <div class="progress" style="height: 35px; border-radius: 0px;">
                       <div style="width: 65%" aria-valuenow="64" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                       <div style="width: 35%" aria-valuenow="35" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <p class="pe-1">charge</p>
                   </div>
                 </div>
               </div>
-              <div class="carousel-item " style="padding: 0px 8px; height: calc(100vh - 26px);">
-                <div class="row bg-black pt-3 py-1 px-3">
-                  <div class="col-3 d-flex justify-content-end">
-                    <h1 class="display-5" style="z-index: 990001;">350A</h1>
-                  </div>
-                  <div class="col-12" style="padding: 17px; margin-top: -75px;">
-                    <div class="progress" style="height: 92px; border-radius: 0px;">
-                      <div style="width: 8%" aria-valuenow="8" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 8%" aria-valuenow="8" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 8%" aria-valuenow="8" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 8%" aria-valuenow="8" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="w-100 d-flex justify-content-between pt-1" style="margin-bottom: -30px;">
-                      <h5>0%</h5>
-                      <h5>100%</h5>
-                    </div>
-                    <div class="w-100 d-flex justify-content-center" style="margin-bottom: -72px;">
-                      <h1 class="display-3 m-0" style="z-index: 999000;">D</h1>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <img class="img-fluid" style="z-index: 990000; margin-top: -161px;" src="assets/images/gauge-mask.png">
-                  </div>
-                </div>
-                <div class="wave" style="margin-left: -8px; z-index: -100;">
-                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                      <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
-                  </svg>
-                </div>
-                <div class="row">
-                  <div class="col text-left ps-5">
-                    <h1 class="display-1 m-0">36</h1>
-                    <p class="ps-1">miles left</p>
-                  </div>
-                  <div class="col text-center">
-                    <h1 style="font-size: 112px; margin-top: -10px;">265</h1>
-                    <h4 style="margin-top: -18px;">mph</h4>
-                  </div>
-                  <div class="col text-end pe-5">
-                    <h1 class="display-1 m-0">36</h1>
-                    <p class="pe-1">miles left</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-4 px-5 pt-3">
-                    <div id="tps" class="progress" style="height: 35px; border-radius: 0px;">
-                      <div style="width: 65%" aria-valuenow="64" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 35%" aria-valuenow="35" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="ps-1">throttle</p>
-                  </div>
-                  <div class="col-4">                    
-                  </div>
-                  <div class="col-4 text-end px-5 pt-3">
-                    <div class="progress" style="height: 35px; border-radius: 0px;">
-                      <div style="width: 65%" aria-valuenow="64" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 35%" aria-valuenow="35" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="pe-1">charge</p>
-                  </div>
-                </div>
+              <div class="carousel-item" style="padding: 0px 8px; height: calc(100vh - 26px);">
+
               </div>
-              <div class="carousel-item " style="padding: 0px 8px; height: calc(100vh - 26px);">
-                <div class="row bg-black pt-3 py-1 px-3">
-                  <div class="col-3 d-flex justify-content-end">
-                    <h1 class="display-5" style="z-index: 990001;">350A</h1>
-                  </div>
-                  <div class="col-12" style="padding: 17px; margin-top: -75px;">
-                    <div class="progress" style="height: 92px; border-radius: 0px;">
-                      <div style="width: 8%" aria-valuenow="8" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 8%" aria-valuenow="8" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 8%" aria-valuenow="8" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 8%" aria-valuenow="8" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="w-100 d-flex justify-content-between pt-1" style="margin-bottom: -30px;">
-                      <h5>0%</h5>
-                      <h5>100%</h5>
-                    </div>
-                    <div class="w-100 d-flex justify-content-center" style="margin-bottom: -72px;">
-                      <h1 class="display-3 m-0" style="z-index: 999000;">D</h1>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <img class="img-fluid" style="z-index: 990000; margin-top: -161px;" src="assets/images/gauge-mask.png">
-                  </div>
-                </div>
-                <div class="wave" style="margin-left: -8px; z-index: -100;">
-                  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                      <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
-                  </svg>
-                </div>
+              <div class="carousel-item" style="padding: 0px 8px; height: calc(100vh - 26px);">
                 <div class="row">
-                  <div class="col text-left ps-5">
-                    <h1 class="display-1 m-0">36</h1>
-                    <p class="ps-1">miles left</p>
-                  </div>
-                  <div class="col text-center">
-                    <h1 style="font-size: 112px; margin-top: -10px;">265</h1>
-                    <h4 style="margin-top: -18px;">mph</h4>
-                  </div>
-                  <div class="col text-end pe-5">
-                    <h1 class="display-1 m-0">36</h1>
-                    <p class="pe-1">miles left</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-4 px-5 pt-3">
-                    <div class="progress" style="height: 35px; border-radius: 0px;">
-                      <div style="width: 65%" aria-valuenow="64" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 35%" aria-valuenow="35" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="ps-1">throttle</p>
-                  </div>
-                  <div class="col-4">                    
-                  </div>
-                  <div class="col-4 text-end px-5 pt-3">
-                    <div class="progress" style="height: 35px; border-radius: 0px;">
-                      <div style="width: 65%" aria-valuenow="64" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 35%" aria-valuenow="35" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="pe-1">charge</p>
-                  </div>
+                  <table>
+                    <tr>
+                      <td>Inverter HV:</td>
+                      <td id="hv_bat_volts">volts</td>
+                    </tr>
+                    <tr>
+                      <td>Inverter Temp:</td>
+                      <td id="inverter_temp">Degrees F</td>
+                    </tr>
+                    <tr>
+                      <td>Motor Temp:</td>
+                      <td id="motor_temp">Degrees F</td>
+                    </tr>
+                    <tr>
+                      <td>Inverter Error:</td>
+                      <td id="inv_error">NA</td>
+                    </tr>
+                    <tr>
+                      <td>TPS:</td>
+                      <td id="tpsDebug">asd</td>
+                    </tr>
+                  </table>
                 </div>
               </div>
             </div>
