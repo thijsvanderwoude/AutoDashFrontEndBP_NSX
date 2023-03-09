@@ -19,11 +19,11 @@ export default {
     <div style="width: 65%" aria-valuenow="65" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
     <div style="width: 35%" aria-valuenow="35" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
     */
-
+    const tpsDifference = 100 - tpsPercentage;
     tpsBar.innerHTML = '<div style="width: '
       + tpsPercentage + '%" aria-valuenow="'
       + tpsPercentage + '" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div><div style="width: '
-      + (100 - tpsPercentage) + '%" aria-valuenow="'
-      + (100 - tpsPercentage) + '" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>';
+      + tpsDifference + '%" aria-valuenow="'
+      + tpsDifference + '" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>';
   },
 };
