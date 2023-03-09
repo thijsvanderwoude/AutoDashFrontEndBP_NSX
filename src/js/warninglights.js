@@ -7,7 +7,6 @@ export default {
     serverConnectionLight = document.getElementById("wl-backend");
   },
   update: (inverterError, noComm) => {
-    console.log(inverterError);
     if (inverterError) {
       inverterErrorLight.classList.remove("d-none");
       return;
