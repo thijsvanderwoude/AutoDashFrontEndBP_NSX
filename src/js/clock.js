@@ -7,7 +7,7 @@ export default {
     clock = document.getElementById("clock");
   },
   update: () => {
-    const now = new moment();
+    const now = moment();
     clock.textContent = now.format("HH:mm");
   },
 };
