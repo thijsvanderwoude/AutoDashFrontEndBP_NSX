@@ -5,7 +5,7 @@ export default {
     speedo = document.getElementById("speedo");
   },
   update: (speed, noComm) => {
-    if (noComm) {
+    if (noComm || speed === undefined) {
       speedo.textContent = '0';
       return;
     }

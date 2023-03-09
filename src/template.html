@@ -34,10 +34,10 @@
               <div class="carousel-item active" style="padding: 0px 8px; height: calc(100vh - 26px);">
                 <div class="row bg-black pt-3 py-1 px-3">
                   <div class="col-3 d-flex justify-content-end">
-                    <h1 class="display-5" style="z-index: 990001;">0A</h1>
+                    <h1 id="amperage" class="display-5" style="z-index: 990001;">0A</h1>
                   </div>
                   <div class="col-12" style="padding: 17px; margin-top: -75px;">
-                    <div class="progress" style="height: 92px; border-radius: 0px;">
+                    <div id="amperageBar" class="progress" style="height: 92px; border-radius: 0px;">
                       <div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                       <div style="width: 2%" aria-valuenow="2" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
@@ -96,8 +96,8 @@
                   <div class="col-4 text-end px-5 pt-3">
                     <p class="pe-1">charge</p>
                     <div class="progress" style="height: 35px; border-radius: 0px;">
-                      <div style="width: 65%" aria-valuenow="64" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      <div style="width: 35%" aria-valuenow="35" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div style="width: 0%" aria-valuenow="0" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div style="width: 100%" aria-valuenow="100" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
