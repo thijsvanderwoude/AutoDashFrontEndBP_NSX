@@ -108,8 +108,8 @@ body {
     background: linear-gradient(180deg, #b40000 0%, rgb(0, 0, 0) 85%);
 }
 
-.bg-race-270 {
-    background: linear-gradient(270deg, #b40000 0%, #2c0000 100%);
+.text-race {
+    color: #a80e0e;
 }
 
 .bg-race {

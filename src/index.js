@@ -5,6 +5,7 @@ import table from "./js/table";
 //import battery from "./js/battery";
 import tps from "./js/tps";
 import speedo from "./js/speedo";
+import warninglights from "./js/warninglights";
 
 const dataWorker = new Worker(
   new URL("./js/comms/drawDataWorker.js", import.meta.url)
@@ -30,8 +31,13 @@ const tick = () => {
   //tachometer.update(updateData[DATA_MAP.RPM.id], isCommError);
   //battery.update(updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id], isCommError);
 
+  warninglights.update(
+    updateData[DATA_MAP.INV_ERROR.id],
+    isCommError
+  );
+
   speedo.update(
-    updateData[DATA_MAP.GPS_SPEEED.id],
+    updateData[DATA_MAP.SPEEDO.id],
     isCommError
   );
 
@@ -62,7 +68,7 @@ const initializeApp = () => {
   //battery.initialize();
   tps.initialize();
   speedo.initialize();
-
+  warninglights.initialize();
   // start up update loop (responsible for updating the graphic positions!)
   tick();
 };
