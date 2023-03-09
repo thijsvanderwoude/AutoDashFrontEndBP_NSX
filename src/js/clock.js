@@ -1,3 +1,5 @@
+import moment from "moment/moment";
+
 let clock = null;  // Backend server connection
 
 export default {
@@ -5,7 +7,7 @@ export default {
     clock = document.getElementById("clock");
   },
   update: () => {
-    const d = new Date();
-    clock.textContent = d.getHours() + ':' + d.getMinutes();
+    const now = new moment();
+    clock.textContent = now.format("HH:mm");
   },
 };
