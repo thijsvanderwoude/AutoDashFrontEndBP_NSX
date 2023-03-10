@@ -7,11 +7,11 @@ export default {
     serverConnectionLight = document.getElementById("wl-backend");
   },
   update: (inverterError, noComm) => {
-    if (inverterError) {
+    if (inverterError || inverterError === undefined) {
       inverterErrorLight.classList.remove("text-black");
       return;
     }
-    if (noComm) {
+    if (noComm || noComm === undefined) {
       serverConnectionLight.classList.remove("text-black");
       return;
     }
