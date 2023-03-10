@@ -1,10 +1,12 @@
 let motorTemperatureGauge = null;
 let inverterTemperatureGauge = null;
+let averageTemperatureGauge = null;
 
 export default {
   initialize: () => {
     motorTemperatureGauge = document.getElementById("motorTemperature");
     inverterTemperatureGauge = document.getElementById("inverterTemperature");
+    averageTemperatureGauge = document.getElementById("averageTemperature");
   },
   update: (motorTemp, inverterTemp, noComm) => {
     if (noComm) {
@@ -31,6 +33,11 @@ export default {
 
     inverterTemperatureGauge.style.setProperty("--rotation", inverterTempAngle + "deg");
 
-    
+    var avgTemp = (motorTempF + inverterTempF) / 2;
+    if (Number.isNaN(avgTemp)) {
+      averageTemperatureGauge.innerHTML = '0';
+      return;
+    }
+    averageTemperatureGauge.innerHTML = avgTemp;
   },
 };
