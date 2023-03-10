@@ -17,6 +17,7 @@ export default {
     // Anything above it and we should warn the driver...?
 
     // motortemp.textContent = (+parseFloat((motorTemp*1.8)+32).toFixed(1));   // MAN THIS IS BAD... SORRY FOR WHO IS READING THIS
+    // I'm not saying what I'm doing is better haha, most of this should be in a function or something...
     var motorTempF = (motorTemp * 1.8) + 32;  // Convert to Fahrenheit
     var motorTempPercentage = parseInt(motorTempF.toFixed()) / 185 * 100; // Convert temp in F to a % of 185F
     var motorTempAngle = 180 * motorTempPercentage / 100;                 // Adjust temp% to a scale of 180 degrees
