@@ -104,6 +104,10 @@ body {
     fill: #000000;
 }
 
+.bg-charging-feint {
+    background-color: #00215f;
+}
+
 .bg-race-180 {
     background: linear-gradient(180deg, #b40000 36%, rgb(0, 0, 0) 100%);
 }
