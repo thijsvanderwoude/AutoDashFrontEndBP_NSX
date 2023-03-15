@@ -76,6 +76,7 @@ export const DATA_MAP = {
   INV_CTS: { id: keygen(), byteType: TYPES.INT16 },  // xx.x degrees C 
   MOTOR_CTS: { id: keygen(), byteType: TYPES.INT16 },  // xx.x degrees C 
   INV_ERROR: { id: keygen(), byteType: TYPES.INT8},
+  INV_AMPS: { id: keygen(), byteType: TYPES.INT16},
 };
 
 // iterate through each key and add the byteOffset to the object

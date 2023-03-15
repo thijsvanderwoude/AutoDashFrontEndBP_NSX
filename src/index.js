@@ -26,7 +26,12 @@ const tick = () => {
   // update stuff
   tachometer.update(updateData[DATA_MAP.RPM.id], isCommError);
   battery.update(updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id], isCommError);
-  table.update(updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id], updateData[DATA_MAP.INV_CTS.id], updateData[DATA_MAP.MOTOR_CTS.id], updateData[DATA_MAP.INV_ERROR.id], isCommError);
+  table.update(updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id],
+	       updateData[DATA_MAP.INV_CTS.id],
+	       updateData[DATA_MAP.MOTOR_CTS.id],
+	       updateData[DATA_MAP.INV_ERROR.id],
+	       updateData[DATA_MAP.INV_AMPS.id],
+	       isCommError);
 
   // request another update frame
   requestAnimationFrame(tick);
