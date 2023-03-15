@@ -105,7 +105,10 @@ body {
 }
 
 .bg-charging-feint {
-    background-color: #00215f;
+    background-color: #001133;
+}
+.bg-charging {
+    background-color: #00aeff;
 }
 
 .bg-race-180 {

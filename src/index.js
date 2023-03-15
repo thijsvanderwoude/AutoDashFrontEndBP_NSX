@@ -8,6 +8,7 @@ import speedo from "./js/speedo";
 import warningLights from "./js/warningLights";
 import clock from "./js/clock";
 import tempGauge from "./js/tempGauge";
+import ampGauge from "./js/ampGauge";
 
 const dataWorker = new Worker(
   new URL("./js/comms/drawDataWorker.js", import.meta.url)
@@ -32,6 +33,11 @@ const tick = () => {
   // update stuff
   //tachometer.update(updateData[DATA_MAP.RPM.id], isCommError);
   //battery.update(updateData[DATA_MAP.INV_HV_BATT_VOLTAGE.id], isCommError);
+
+  ampGauge.update(
+    updateData[DATA_MAP.INV_AMPS.id],
+    isCommError
+  )
 
   tempGauge.update(
     updateData[DATA_MAP.MOTOR_CTS.id],
@@ -81,6 +87,7 @@ const initializeApp = () => {
   warningLights.initialize();
   clock.initialize();
   tempGauge.initialize();
+  ampGauge.initialize();
   // start up update loop (responsible for updating the graphic positions!)
   tick();
 };
