@@ -38,6 +38,6 @@ export default {
       averageTemperatureGauge.innerHTML = '0';
       return;
     }
-    averageTemperatureGauge.innerHTML = avgTemp;
+    averageTemperatureGauge.innerHTML = Math.round(avgTemp);
   },
 };
