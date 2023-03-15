@@ -1,5 +1,6 @@
 let amperageBarGauge = null;
 let amperageNumberGauge = null;
+let maxAmps = 261; // Max amperage seen in Instagram video
 
 export default {
   initialize: () => {
@@ -11,9 +12,9 @@ export default {
       return;
     }
 
-    const maxAmps = 261;    // Max amperage seen in Instagram video
     if (inverterAmps > maxAmps) {
-      inverterAmps = maxAmps;
+      maxAmps = inverterAmps;     // In case amperage gets higher than 261
+      console.log(maxAmps);       // Spam it in the log just in case!
     }
 
     var barGauge = '';
