@@ -53,7 +53,7 @@ const tick = () => {
   );
 
   speedo.update(
-    updateData[DATA_MAP.SPEEDO.id],
+    updateData[DATA_MAP.RPM.id],
     isCommError
   );
 
