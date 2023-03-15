@@ -88,7 +88,7 @@ body {
 }
 
 .wave {
-    width: 100vw;
+    width: 1024px;
     overflow: hidden;
     line-height: 0;
 }
@@ -96,7 +96,7 @@ body {
 .wave svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
+    width: calc(1024px + 1.3px);
     height: 35px;
 }
 
