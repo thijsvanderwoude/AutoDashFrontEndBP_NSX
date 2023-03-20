@@ -24,9 +24,9 @@ export default {
       barGauge = '<div style="width: 12%" aria-valuenow="12" class="progress-bar bg-charging-feint" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>';
 
       var percentageFactorOfMaxAmps = inverterAmps / maxAmps;   // Percentage but divided by 100
-      var amountOfBars = Math.round(22 * percentageFactorOfMaxAmps);  // 22 is the amount of bars (4% width per bar, 1% black 3% red)
+      var amountOfBars = Math.round(22 * percentageFactorOfMaxAmps);  // 22 is the amount of bars (4% width per bar, 1% black 3% white)
       for (var i = 0; i < amountOfBars; i++) {
-        barGauge += '<div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div><div style="width: 3%" aria-valuenow="3" class="progress-bar bg-race" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>';
+        barGauge += '<div style="width: 1%" aria-valuenow="1" class="progress-bar bg-black" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div><div style="width: 3%" aria-valuenow="3" class="progress-bar bg-white" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>';
       }
 
       var barRemainder = (22 - i) * 4;
