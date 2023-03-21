@@ -1,6 +1,6 @@
 let speedo = null;
 const tireDiameter = 26.3;    // https://tiresize.com/calculator/ to calculate diameter of the rear tire
-const gearRatio = 9.71;       // Tesla large drive unit gear ratio according to tesla.com?
+const gearRatio = 9.73;       // Tesla large drive unit gear ratio according to https://www.edmunds.com/tesla/model-s/2012/road-test-specs1.html
 
 export default {
   initialize: () => {
