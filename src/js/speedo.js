@@ -5,9 +5,6 @@ const gearRatio = 9.73;       // Tesla large drive unit gear ratio according to 
 export default {
   initialize: () => {
     speedo = document.getElementById("speedo");
-
-    
-    
   },
   update: (rpm, noComm) => {
     if (noComm || rpm === undefined) {
